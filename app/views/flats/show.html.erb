@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @flat.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @flat.address %>
+</p>
+
+<div
+  id='map'
+  style='width: 100%; height: 600px;'
+  data-markers='<%= @markers.to_json %>'
+></div>
+
+<%= link_to 'Edit', edit_flat_path(@flat) %> |
+<%= link_to 'Back', flats_path %>
+
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_BROWSER_KEY']}" %>
+<%= javascript_pack_tag 'map' %>

@@ -3,7 +3,7 @@ ruby '2.5.0'
 
 gem 'bootsnap', require: false
 gem 'devise'
-gem 'jbuilder', '~> 2.0'
+# gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.1'
@@ -16,6 +16,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -29,3 +30,5 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
 end
+
+gem 'dotenv-rails', groups: [:development, :test]
